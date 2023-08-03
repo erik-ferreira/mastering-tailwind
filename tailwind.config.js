@@ -3,12 +3,8 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
-      colors: {
-        erik: "#FF0000",
-      },
-
-      maxWidth: {
-        app: "700px",
+      gridTemplateColumns: {
+        app: "minmax(18rem, 20rem) 1fr",
       },
     },
   },
