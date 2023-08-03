@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         erik: "#FF0000",
       },
+
+      maxWidth: {
+        app: "700px",
+      },
     },
   },
   plugins: [],
