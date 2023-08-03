@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="h-screen bg-slate-900 p-8 text-slate-100">
-      <h1 className="font-bold text-5xl flex items-center gap-3 before:w-0.5 before:h-8 before:bg-sky-500 before:flex">
+      <h1 className="font-bold text-3xl sm:text-5xl lg:text-6xl flex items-center gap-3 before:w-0.5 before:h-8 before:bg-sky-500 before:flex">
         Hello guys
       </h1>
       <h2>Hello tailwind</h2>
