@@ -12,6 +12,8 @@ import {
 
 import { Logo } from "./Logo"
 import { NavItem } from "./NavItem"
+import { Profile } from "./Profile"
+import * as Input from "@/components/Input"
 import { UsedSpaceWidget } from "./UsedSpaceWidget"
 
 export function Sidebar() {
@@ -19,13 +21,12 @@ export function Sidebar() {
     <aside className="flex flex-col gap-6 border-r border-zinc-200 px-5 py-8">
       <Logo />
 
-      <div className="w-full flex items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 mx-1 shadow-sm">
-        <Search className="w-5 h-5 text-zinc-500" />
-        <input
-          className="flex-1 border-0 bg-transparent p-0 text-zinc-900 placeholder-zinc-600"
-          placeholder="Search"
-        />
-      </div>
+      <Input.Root>
+        <Input.Prefix>
+          <Search className="w-5 h-5 text-zinc-500" />
+        </Input.Prefix>
+        <Input.Control placeholder="Search" />
+      </Input.Root>
 
       <nav className="space-y-0.5">
         <NavItem title="Home" icon={Home} />
@@ -43,6 +44,10 @@ export function Sidebar() {
         </nav>
 
         <UsedSpaceWidget />
+
+        <div className="h-px bg-zinc-200" />
+
+        <Profile />
       </div>
     </aside>
   )
