@@ -1,19 +1,12 @@
-import {
-  Bold,
-  ChevronDown,
-  Italic,
-  Link,
-  List,
-  ListOrdered,
-  Mail,
-} from "lucide-react"
+import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react"
 
+import Label from "@/components/Form/Label"
 import * as Input from "@/components/Input"
 import { Select } from "@/components/Form/Select"
+import { Textarea } from "@/components/Form/Textarea"
 import * as FileInput from "@/components/Form/FileInput"
 import { SettingsTabs } from "@/components/SettingsTabs"
 import { SelectItem } from "@/components/Form/Select/SelectItem"
-import { Textarea } from "@/components/Form/Textarea"
 
 export default function Home() {
   return (
@@ -52,12 +45,7 @@ export default function Home() {
           className="w-full flex flex-col gap-5 mt-6 divide-y divide-zinc-200"
         >
           <div className="grid grid-cols-form gap-3">
-            <label
-              htmlFor="firstName"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Name
-            </label>
+            <Label text="Name" htmlFor="firstName" />
 
             <div className="grid grid-cols-2 gap-6">
               <Input.Root>
@@ -71,12 +59,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Email address
-            </label>
+            <Label text="Email address" htmlFor="email" />
 
             <Input.Root>
               <Input.Prefix>
@@ -91,15 +74,11 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
+            <Label
               htmlFor="photo"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Your photo
-              <span className="mt-0.5 block text-sm font-normal text-zinc-500">
-                This will be displayed on your profile
-              </span>
-            </label>
+              text="Your photo"
+              description="This will be displayed on your profile"
+            />
 
             <FileInput.Root className="flex items-start gap-5">
               <FileInput.ImagePreview />
@@ -109,9 +88,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label htmlFor="role" className="text-sm font-medium text-zinc-700">
-              Role
-            </label>
+            <Label text="Role" htmlFor="role" />
 
             <Input.Root>
               <Input.Control id="role" defaultValue="Dev" />
@@ -119,12 +96,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="country"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Country
-            </label>
+            <Label text="Country" htmlFor="country" />
 
             <Select placeholder="Select a country...">
               <SelectItem value="br" text="Brazil" />
@@ -133,12 +105,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="timezone"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Timezone
-            </label>
+            <Label text="Country" htmlFor="timezone" />
 
             <Select placeholder="Select a timezone...">
               <SelectItem
@@ -150,12 +117,11 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
-              Bio
-              <span className="mt-0.5 text-sm font-normal text-zinc-500 block">
-                Write a short introduction
-              </span>
-            </label>
+            <Label
+              text="Country"
+              description="Write a short introduction"
+              htmlFor="bio"
+            />
 
             <div className="space-y-3">
               <div className="grid grid-cols-2 gap-3">
@@ -213,15 +179,11 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
+            <Label
+              text="Portfolio projects"
+              description="Share a few snippets of your work."
               htmlFor="projects"
-              className="text-sm font-medium text-zinc-700"
-            >
-              Portfolio projects
-              <span className="mt-0.5 text-sm font-normal text-zinc-500 block">
-                Share a few snippets of your work.
-              </span>
-            </label>
+            />
 
             <FileInput.Root>
               <FileInput.Trigger />
