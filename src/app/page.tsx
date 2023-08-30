@@ -2,6 +2,7 @@ import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react"
 
 import Label from "@/components/Form/Label"
 import * as Input from "@/components/Input"
+import { Button } from "@/components/Button"
 import { Select } from "@/components/Form/Select"
 import { Textarea } from "@/components/Form/Textarea"
 import * as FileInput from "@/components/Form/FileInput"
@@ -24,19 +25,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="text-sm font-semibold px-4 py-2 border border-zinc-300 rounded-lg text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              type="submit"
-              className="text-sm font-semibold text-white px-4 py-2 rounded-lg shadow-sm bg-violet-600 hover:bg-violet-700"
-              form="settings"
-            >
+            </Button>
+            <Button type="submit" form="settings" variant="primary">
               Save
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -135,39 +129,24 @@ export default function Home() {
                 </Select>
 
                 <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <Bold strokeWidth={3} className="w-4 h-4 text-zinc-500" />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Italic strokeWidth={3} className="w-4 h-4 text-zinc-500" />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Link strokeWidth={3} className="w-4 h-4 text-zinc-500" />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <List strokeWidth={3} className="w-4 h-4 text-zinc-500" />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <ListOrdered
                       strokeWidth={3}
                       className="w-4 h-4 text-zinc-500"
                     />
-                  </button>
+                  </Button>
                 </div>
               </div>
 
@@ -193,19 +172,12 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-5">
-            <button
-              type="button"
-              className="text-sm font-semibold px-4 py-2 border border-zinc-300 rounded-lg text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              type="submit"
-              className="text-sm font-semibold text-white px-4 py-2 rounded-lg shadow-sm bg-violet-600 hover:bg-violet-700"
-              form="settings"
-            >
+            </Button>
+            <Button type="submit" form="settings" variant="primary">
               Save
-            </button>
+            </Button>
           </div>
         </form>
       </div>
